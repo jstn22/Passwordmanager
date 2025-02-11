@@ -12,4 +12,4 @@ password = input("Passwort: ")
 
 add_item(name, password)
 
-print("User erfolgreich hinzugefügt!")
+print("User erfolgreich hinzugefügt")

@@ -5,5 +5,5 @@ def db_connection():
         host="localhost",
         user="root",  # Standardbenutzer in XAMPP
         password="",  # Standardmäßig ist kein Passwort gesetzt
-        database="passwort_manager"  # Name der erstellten Datenbank
+        database="password_manager"  # Name der erstellten Datenbank
     )

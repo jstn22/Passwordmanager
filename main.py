@@ -4,13 +4,13 @@ from cryptography.fernet import Fernet
 import base64
 import os
 
-# AES-Schlüssel generieren (Dieser sollte sicher gespeichert werden!)
+
 KEY = base64.urlsafe_b64encode(os.urandom(32))
 cipher = Fernet(KEY)
 
-# Verbindung zur Datenbank herstellen
+# Verbindung zur Datenbank
 conn = db_connect.db_connection()
-cursor = conn.cursor(buffered=True)  # Verhindert "Unread result found"
+cursor = conn.cursor(buffered=True)
 
 # Sprachoptionen
 languages = {
@@ -102,7 +102,7 @@ def register():
         print(lang["registration_success"])
         break
 
-# Login mit maximal 3 Versuchen
+# Login maximal 3 Versuchen
 def login():
     attempts = 3
     while attempts > 0:
